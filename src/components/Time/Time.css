@@ -1,0 +1,47 @@
+
+    .fotos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .fotos img {
+        width: 200px;
+        margin: 0 15px 30px;
+        border: 3px solid #000000;
+        border-radius: 50%;
+    }
+
+    .integrante_content {
+        padding: 40px;
+    }
+
+    .caixa-integrante {
+        padding: 10px;
+        position: relative;
+        margin-top: -70px;
+        border: 3px solid #000000;
+        border-radius: 20px;
+        background-color: #007AFF;
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .integrante-link {
+        text-decoration: none;
+    }
+
+    .integrante_social_media {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 0px;
+    }
+
+    .integrante_social_media .integrante-link {
+        color: #ffffff;
+        font-size: 30px
+    }
