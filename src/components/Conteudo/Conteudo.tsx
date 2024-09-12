@@ -3,22 +3,21 @@ import Time from '../Time/Time';
 
 const ConteudoContainer = styled.div`
     width: 100%;
-    padding: 5px 5px;
-    background-color: #00A1FC;
-    color: #FFFFFF;
+    padding: 20px;
+    background-color: #00a1fc;
+    color: #ffffff;
     text-align: left;
 `;
 
 const ConteudoTitle = styled.h1`
     font-size: 55px;
-    padding: 10px 0;
+    margin: 0 0 20px 0; 
 `;
 
 const ConteudoText = styled.p`
     font-size: 32px;
     font-weight: 400;
-    padding: 0px 0;
-    list-style: none;
+    margin: 0; 
 `;
 
 function Conteudo() {

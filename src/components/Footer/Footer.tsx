@@ -4,36 +4,32 @@ const FooterContainer = styled.footer`
     width: 100%;
     color: #ffffff;
     background-color: #000000;
-    padding: 5px 5px;
+    padding: 20px; 
 `;
 
 const FooterContent = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    align-items: center;
-    padding: 20px;
+    align-items: start; 
+    padding: 20px 0; 
     text-align: left;
 `;
 
 const FooterList = styled.ul`
     list-style: none;
+    padding: 0; 
+    margin: 0; 
 
     h3 {
-        text-align: left;
         margin-bottom: 10px;
     }
-`;
-
-const FooterList2 = styled.ul`
-    list-style: none;
-    margin-top: 30px;
 `;
 
 const FooterLink = styled.a`
     text-decoration: none;
     color: #a8a29e;
-    transition: all 0.4s;
+    transition: color 0.4s;
 
     &:hover {
         color: #555555;
@@ -48,22 +44,23 @@ const FooterContacts = styled.div`
 
 const FooterSocialMedia = styled.div`
     display: flex;
-    justify-content: left;
-    gap: 2rem;
+    justify-content: flex-start;
+    gap: 1rem; 
     font-size: 30px;
     margin-top: 20px;
 `;
 
 const FooterBar = styled.div`
-    padding: 10px;
+    padding: 10px 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
+    border-top: 1px solid #333; 
 `;
 
 const FooterBarText = styled.p`
-    text-decoration: none;
     color: #ffffff;
+    margin: 0; 
 `;
 
 function Footer() {
@@ -92,15 +89,15 @@ function Footer() {
                     <li><FooterLink href="https://blog.portoseguro.com.br">Blog</FooterLink></li>
                 </FooterList>
 
-                <FooterList2>
+                <FooterList>
                     <li><FooterLink href="https://www.portoseguro.com.br/institucional/sobre-a-porto-seguro/empresas-do-grupo">Empresas do Grupo</FooterLink></li>
                     <li><FooterLink href="https://ri.portoseguro.com.br">Parceiros e Acionistas</FooterLink></li>
                     <li><FooterLink href="https://www.portoseguro.com.br/institucional/patrocinio">Patrocínio</FooterLink></li>
                     <li><FooterLink href="https://www.portoseguro.com.br/fale-conosco/trabalhe-conosco">Trabalhe Conosco</FooterLink></li>
-                </FooterList2>
+                </FooterList>
 
                 <FooterContacts>
-                    <img src="./img/logo_rodape.png" width="160" height="38" alt="Logo PORTO Rodapé"/>
+                    <img src="./img/logo_rodape.png" width="160" height="38" alt="Logo PORTO Rodapé" />
                     <h3>Acompanhe a Porto nas redes sociais</h3>
                     <FooterSocialMedia>
                         <FooterLink href="https://www.facebook.com/portoseguro/"><i className="fa-brands fa-facebook"></i></FooterLink>

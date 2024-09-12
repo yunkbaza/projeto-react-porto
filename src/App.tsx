@@ -7,7 +7,7 @@ import Vantagens from './components/Vantagens/Vantagens';
 export default function App() {
   return (
     <div>
-      <GlobalStyles /> {/* Aplica os estilos globais */}
+      <GlobalStyles />
       <Cabecalho />
       <hr />
       <Conteudo />

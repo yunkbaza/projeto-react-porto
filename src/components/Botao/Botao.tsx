@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 const BtnLogin = styled.div`
     display: flex;
     padding: 10px 20px;
+    justify-content: center;
 `;
 
-const BtnBar = styled.ul`
+const BtnBar = styled.li`
     letter-spacing: 0.6px;
     border-radius: 4px;
     width: 150px;
@@ -30,9 +31,7 @@ function Botao() {
     return (
         <BtnLogin>
             <BtnBar>
-                <li>
-                    <StyledLink to="/areacliente">Área do Cliente</StyledLink>
-                </li>
+                <StyledLink to="/areacliente">Área do Cliente</StyledLink>
             </BtnBar>
         </BtnLogin>
     );
