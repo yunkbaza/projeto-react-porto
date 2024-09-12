@@ -1,6 +1,6 @@
-import "./Time.css"
+import styled from 'styled-components';
 
-type MembroTime = {
+type MembroTimeType = {
     name: string;
     rm: string;
     imgSrc: string;
@@ -9,7 +9,7 @@ type MembroTime = {
     email: string;
 };
 
-const MembroTime: MembroTime[] = [
+const MembroTime: MembroTimeType[] = [
     {
         name: 'Allan Gabriel Baeza Amirati',
         rm: 'RM556771 - 1TDSPF',
@@ -36,32 +36,84 @@ const MembroTime: MembroTime[] = [
     },
 ];
 
+const TeamContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`;
+
+const PhotosList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+`;
+
+const MemberContent = styled.li`
+    padding: 40px;
+`;
+
+const MemberImage = styled.img`
+    width: 200px;
+    margin: 0 35px 30px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+`;
+
+const MemberBox = styled.section`
+    padding: 10px;
+    position: relative;
+    margin-top: -70px;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    background-color: #007AFF;
+    text-align: center;
+`;
+
+const MemberName = styled.h3`
+    margin: 0;
+`;
+
+const SocialMedia = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 10px;
+`;
+
+const SocialLink = styled.a`
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+`;
+
 const Time: React.FC = () => {
     return (
-        <div className="team">
-            <ul className="fotos">
+        <TeamContainer>
+            <PhotosList>
                 {MembroTime.map((member, index) => (
-                    <li key={index} className="integrante_content">
-                        <img src={member.imgSrc} alt="Foto do Membro" />
-                        <section className="caixa-integrante">
-                            <h3>{member.name}</h3>
-                            <h3>{member.rm}</h3>
-                            <div className="integrante_social_media">
-                                <a href={member.linkedin} className="integrante-link">
+                    <MemberContent key={index}>
+                        <MemberImage src={member.imgSrc} alt={`Foto de ${member.name}`} />
+                        <MemberBox>
+                            <MemberName>{member.name}</MemberName>
+                            <MemberName>{member.rm}</MemberName>
+                            <SocialMedia>
+                                <SocialLink href={member.linkedin}>
                                     <i className="fa-brands fa-linkedin"></i>
-                                </a>
-                                <a href={member.github} className="integrante-link">
+                                </SocialLink>
+                                <SocialLink href={member.github}>
                                     <i className="fa-brands fa-github"></i>
-                                </a>
-                                <a href={member.email} className="integrante-link">
+                                </SocialLink>
+                                <SocialLink href={member.email}>
                                     <i className="fa-solid fa-envelope"></i>
-                                </a>
-                            </div>
-                        </section>
-                    </li>
+                                </SocialLink>
+                            </SocialMedia>
+                        </MemberBox>
+                    </MemberContent>
                 ))}
-            </ul>
-        </div>
+            </PhotosList>
+        </TeamContainer>
     );
 };
 

@@ -1,24 +1,38 @@
-import Time from "../Time/Time"
-import "./Conteudo.css"
+import styled from 'styled-components';
+import Time from '../Time/Time';
+
+const ConteudoContainer = styled.div`
+    width: 100%;
+    padding: 5px 5px;
+    background-color: #00A1FC;
+    color: #FFFFFF;
+    text-align: left;
+`;
+
+const ConteudoTitle = styled.h1`
+    font-size: 55px;
+    padding: 10px 0;
+`;
+
+const ConteudoText = styled.p`
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0px 0;
+    list-style: none;
+`;
 
 function Conteudo() {
-    
-    return(
-
-        <div className="conteudo">
-
-            <h1>THE TEAM</h1>
-
-            <p>
+    return (
+        <ConteudoContainer>
+            <ConteudoTitle>THE TEAM</ConteudoTitle>
+            <ConteudoText>
                 O grupo do Challenge é composto por estudantes com foco na criatividade, determinação e proatividade
                 para implementação de tecnologias front-end inovadoras e melhores práticas de design, nesse desafio tão
                 importante que a Porto nos encaminhou.
-            </p>
-
-        <Time />
-
-        </div>
-    )
+            </ConteudoText>
+            <Time />
+        </ConteudoContainer>
+    );
 }
 
-export default Conteudo
+export default Conteudo;

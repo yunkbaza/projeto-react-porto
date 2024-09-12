@@ -1,4 +1,4 @@
-import "../routes.css"
+
 const Error = () => {
     return(
         <div>

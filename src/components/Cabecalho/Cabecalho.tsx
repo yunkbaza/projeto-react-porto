@@ -1,42 +1,100 @@
-import "./Cabecalho.css"
-import  Botao from "../Botao/Botao";
+import styled from 'styled-components';
+import Botao from '../Botao/Botao';
+
+const Header = styled.header`
+    width: 100%;
+`;
+
+const TopContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+`;
+
+const Logo = styled.img`
+    width: 143px;
+    height: 34px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+`;
+
+const NavBar = styled.nav`
+    display: flex;
+    justify-content: center;
+`;
+
+const TopList = styled.ul`
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 5px;
+`;
+
+const TopLink = styled.a`
+    font-size: 15px;
+    font-weight: 400;
+    color: #4B4B4B;
+    text-decoration: none;
+    padding: 0 50px;
+    &:hover {
+        color: #0046c0;
+    }
+`;
+
+const NavList = styled.ul`
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+`;
+
+const NavItem = styled.li`
+    padding: 0 20px;
+`;
+
+const NavLink = styled.a`
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    &:hover {
+        color: #0046c0;
+    }
+`;
+
+const NavArrow = styled.nav`
+    display: flex;
+`;
 
 function Cabecalho() {
-    return(
-    <header>
-        <div id="top">
-            <img src="../img/logo.png" alt="Logo Porto" />
-            <nav className="nav_bar">
-                <ul className="top-list">
-                    <li><a href="https://www.portoseguro.com.br/institucional/sobre-a-porto-seguro" className="top-link">Sobre nós</a></li>
-                    <li><a href="https://www.portoseguro.com.br/canal-de-ajuda" className="top-link">Ajuda</a></li>
-                    <li><a href="https://blog.portoseguro.com.br/?_gl=1*1i8d1h1*_gcl_au*MTIzMTkxODM3OS4xNzI0OTUyNzY0*_ga*OTcyNzg2OTMuMTcyNDk1Mjc2NA..*_ga_S9FTJ8D526*MTcyNDk1Mjc2NC4xLjEuMTcyNDk1MzM0My42MC4wLjA." className="top-link">Blog</a></li>
-                    <li><a href="https://www.portoseguro.com.br/fale-conosco/contatos/encontre-um-corretor" className="top-link">Encontre um Corretor</a></li>
-                </ul>
-            </nav>
-            <Botao />
-        </div>
-        <nav className="nav_arrow">
-            <div className="nav-list">
-                <ul>
-                    <li className="nav-item"><a href="#" className="nav-link">Seguros</a></li>
-                </ul>
-                <ul>
-                    <li className="nav-item"><a href="#" className="nav-link">Serviços</a></li>
-                </ul>
-                <ul>
-                    <li className="nav-item"><a href="#" className="nav-link">Bank</a></li>
-                </ul>
-                <ul>
-                    <li className="nav-item"><a href="#" className="nav-link">Saúde</a></li>
-                </ul>
-                <ul>
-                    <li className="nav-item"><a href="#" className="nav-link">Categorias</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    )
+    return (
+        <Header>
+            <TopContainer id="top">
+                <Logo src="../img/logo.png" alt="Logo Porto" />
+                <NavBar className="nav_bar">
+                    <TopList>
+                        <li><TopLink href="https://www.portoseguro.com.br/institucional/sobre-a-porto-seguro">Sobre nós</TopLink></li>
+                        <li><TopLink href="https://www.portoseguro.com.br/canal-de-ajuda">Ajuda</TopLink></li>
+                        <li><TopLink href="https://blog.portoseguro.com.br/">Blog</TopLink></li>
+                        <li><TopLink href="https://www.portoseguro.com.br/fale-conosco/contatos/encontre-um-corretor">Encontre um Corretor</TopLink></li>
+                    </TopList>
+                </NavBar>
+                <Botao />
+            </TopContainer>
+            <NavArrow className="nav_arrow">
+                <NavList>
+                    <NavItem><NavLink href="#">Seguros</NavLink></NavItem>
+                    <NavItem><NavLink href="#">Serviços</NavLink></NavItem>
+                    <NavItem><NavLink href="#">Bank</NavLink></NavItem>
+                    <NavItem><NavLink href="#">Saúde</NavLink></NavItem>
+                    <NavItem><NavLink href="#">Categorias</NavLink></NavItem>
+                </NavList>
+            </NavArrow>
+        </Header>
+    );
 }
 
-export default Cabecalho
+export default Cabecalho;
