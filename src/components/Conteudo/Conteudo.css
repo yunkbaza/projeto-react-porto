@@ -1,0 +1,21 @@
+.conteudo {
+    width: 100%;
+    padding: 5px 5px;
+    background-color: #00A1FC;
+    color: #FFFFFF;
+    text-align:left;
+}
+
+.conteudo h1 {
+    font-size: 55px;
+    padding: 10px 0;
+}
+
+.conteudo p {
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0px 0;
+    list-style: none;
+
+}
+
